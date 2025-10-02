@@ -4,30 +4,27 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-int a,b;
-char c;
-int result;
+int x=59,input,count=0;
 
-printf("enter the calculation:");
-scanf("%d%c%d",&a,&c,&b);
-switch(c){
-	case '+':
-		result=a+b;
-		break;
-	case '-':
-		result=a-b;
-		break;
-	case '*':
-		result=a*b;
-		break;
-	case '/':
-		result=a/b;
-		break;	
-		
-	default:
-		printf("잘못된 기호를 입력하였습니다.");
-}
-printf("=%d",result);
+do{
+
+printf("Guess a number:");
+scanf("%d",&input);
+	
+if (input<x)
+	printf("high!\n");
+else if(input>x)
+	printf("low!\n");
+	count++;
+	}
+	
+	while(input!=x);
+	
+
+
+printf("Congratulation! trials:%d",count);
+return 0;
+
 }
 
 
